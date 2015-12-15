@@ -20,7 +20,7 @@ const renderAddingComment = props => (
 const renderAddCommentLink = props => {
   const toggleCommenting = props.post.isSinglePost ? () => {} : () => props.toggleCommenting(props.post.id)
 
-  if (props.comments.length > 2 && !props.post.omittedComments /* TODO: && user_is_signed_in */) {
+  if (props.comments.length > 0 && !props.post.omittedComments /* TODO: && user_is_signed_in */) {
     return (
       <div className="comment">
         <a className="comment-icon fa-stack fa-1x" onClick={preventDefault(toggleCommenting)}>
